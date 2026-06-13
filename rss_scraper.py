@@ -2,13 +2,14 @@ import os
 import time
 import feedparser
 import pandas as pd
+from config import STATE
 
 from urllib.parse import quote_plus
 from datetime import datetime
 
 from query_generator import generate_queries
 
-OUTPUT_FILE = "data/raw/raw_rss_results_maharashtra.csv"
+OUTPUT_FILE = "data/raw/raw_rss_results_" + STATE  + ".csv"
 os.makedirs(
     "data/raw",
     exist_ok=True
