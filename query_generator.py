@@ -1,20 +1,17 @@
-from config import STATE, FRAUD_CATEGORIES
+from config_keywords_reject_terms.config import FRAUD_CATEGORIES
+from config_keywords_reject_terms.states_term import INDIAN_STATES
 
 def generate_queries():
     queries = []
-
-    for category, keywords in FRAUD_CATEGORIES.items():
-
-        for keyword in keywords:
-
-            query = f"{keyword} {STATE}"
-
-            queries.append({
-                "query": query,
-                "search_intent": category
-            })
-
-    print(queries)
+    for state in INDIAN_STATES:                         
+        for category, keywords in FRAUD_CATEGORIES.items():
+            for keyword in keywords:                     
+                query = f"{keyword} {state}"           
+                queries.append({                        
+                    "query": query,
+                    "search_intent": category
+                })
+    
     return queries
 
 if __name__ == "__main__":

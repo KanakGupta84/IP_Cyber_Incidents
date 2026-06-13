@@ -1,109 +1,35 @@
 import os
+import sys
 import pandas as pd
+from config_keywords_reject_terms.reject_term_pass_2 import REJECT_TERMS
+from config_keywords_reject_terms.states_term import INDIA_STATES_CITIES
 
-INPUT_FILE = "data/deduplicated_url_based/unique_rss_results_maharashtra.csv"
 
-OUTPUT_ALL = "data/deduplicated_url_based/noise_filtered_maharashtra.csv"
-OUTPUT_CANDIDATES = "data/deduplicated_url_based/candidate_articles_maharashtra.csv"
+if len(sys.argv) < 2:
+    print("Usage: python noise_filter.py <state_name>")
+    sys.exit(1)
+
+STATE = sys.argv[1]
+
+INPUT_FILE = "data/deduplicated_url_based/unique_rss_results_"+ STATE +  ".csv"
+
+OUTPUT_ALL = "data/deduplicated_url_based/noise_filtered_" + STATE + ".csv"
+OUTPUT_CANDIDATES = "data/deduplicated_url_based/candidate_articles_" + STATE + ".csv"
 
 os.makedirs("data/processed", exist_ok=True)
 
-# ==================================================
-# MAHARASHTRA TERMS
-# ==================================================
-
-MAHARASHTRA_TERMS = [
-
-    "maharashtra", "mumbai", "navi mumbai", "bombay",
-    "pune", "nagpur", "nashik", "thane", "aurangabad", "chhatrapati sambhajinagar", "kolhapur", "solapur", "amravati",
-    "jalgaon", "satara", "latur", "pimpri", "chinchwad", "akola", "ahmednagar", "sangli", "beed", "parbhani",
-    "osmanabad", "wardha", "yavatmal", "bhandara", "gondia", "ratnagiri", "sindhudurg", "raigad", "dhule", "buldhana",
-    "washim", "hingoli", "nanded", "chandrapur", "gadchiroli", "palghar", "jalna", "bid", "karad", "ichalkaranji",
-    "panvel", "vasai", "virar", "bhiwandi", "ulhasnagar", "mira bhayandar", "kalyan", "dombivli", "badlapur", "ambarnath",
-    "barshi", "nanded waghala", "gondiya", "achalpur", "deolali", "shirdi", "lonavala", "khopoli", "alibaug", "mahad", 
-    "chiplun", "malegaon", "shirpur", "pandharpur", "udgir", "ahmadnagar", "shrirampur", "manmad", "bhusawal", "chalisgaon",
-
-]
-
-# ==================================================
-# NOISE TERMS
-# ==================================================
-
-REJECT_TERMS = [
-
-    # Awareness
-    "awareness campaign", "cyber awareness drive",
-    "awareness drive", "cyber awareness", "cyber safety",
-
-    # Tips
-    "how to avoid", "how to protect", "safety tips",
-    "tips to stay safe", "stay safe", "protect yourself",
-    "stay vigilant", "personal safety",
-
-    # Advisory
-    "advisory", "issued advisory", "government advisory",
-    "warning", "warns citizens", "police warning",
-
-    # Reports
-    "survey", "study",
-    "research", "statistics", "annual report",
-
-    # Education
-    "what is", "explained", "guide to",
-
-    "tops list", "logs",
-    "cases in 2026", "cases in 2025", "cases in 2024", "cases in 2023", "cases in 2022", "cases in 2021", "cases in 2020", 
-    "cases in 2019", "cases in 2018", "cases in 2017",  
-    "report", "statistics", "under scanner",
-    "official says", "official urges", "assembly session",
-    "chain of command", "policy", "response framework",
-
-    # Government schemes / policy noise (not incidents)
-    "loan waiver", "msp scam", "yojana", "scheme launched",
-    "crop insurance scheme", "fasal bima",
-
-    # Elections / political noise
-    "assembly polls", "municipal election", "civic polls",
-    "voters list", "election commission", "poll campaign",
-    "vidhan sabha", "lok sabha", "mla", "mlc", "deputy cm", "chief minister",
-    "bitcoin scam", "bjp", "congress", "ncp", "shiv sena",
-
-    # QR code mandates / govt initiatives (not fraud incidents)
-    "qr code initiative", "qr code mandatory",
-    "know your doctor", "verification mandatory",
-
-    # Generic civic/infra/weather news leaking via keyword overlap
-    "weather forecast", "rain alert", "imd issues", "monsoon",
-    "traffic update", "road closed", "school closed", "public holiday",
-    "cabinet approves", "govt orders inquiry", "irrigation scam",
-    "land scam", "toll tax",
-
-    # Old/aggregated stat pieces, churnalism
-    "sprouts news", "in last 5 years", "in 10 years", "over the years",
-    "crosses rs", "tops list",
-
-    # Court/legal procedural updates (not new incidents)
-    "grants bail", "denies bail", "anticipatory bail",
-    "chargesheet filed", "court rejects", "court grants",
-
-    # Generic finance/market news unrelated to fraud incidents
-    "share price", "ipo allotment", "stock market closed",
-    "market holiday", "rbi proposes", "rbi launches", "new upi rules", "sebi bans", "sebi advises",
-    "sebi launches", "sebi proposes",
-
-]
 
 # ==================================================
 # FUNCTIONS
 # ==================================================
 
-def check_maharashtra(title):
+def check_state_and_cities(title):
 
     title = str(title).lower()
 
     return any(
-        term in title
-        for term in MAHARASHTRA_TERMS
+        term.lower() in title
+        for term in INDIA_STATES_CITIES[STATE]
     )
 
 def check_noise(title):
@@ -132,9 +58,9 @@ def main():
     # Flags
     # ------------------------------------------
 
-    df["is_maharashtra"] = (
+    df["is_state_and_cities"] = (
         df["title"]
-        .apply(check_maharashtra)
+        .apply(check_state_and_cities)
     )
 
     df["is_noise"] = (
@@ -144,14 +70,14 @@ def main():
 
     def classify_row(row):
 
-        if row["is_maharashtra"] and not row["is_noise"]:
+        if row["is_state_and_cities"] and not row["is_noise"]:
             return "candidate"
 
         if row["is_noise"]:
             return "noise"
 
-        if not row["is_maharashtra"]:
-            return "non_maharashtra"
+        if not row["is_state_and_cities"]:
+            return "non_cities_and_non_state"
 
         return "other"
 
@@ -203,8 +129,8 @@ def main():
     )
 
     print(
-        f"Maharashtra Rows: "
-        f"{df['is_maharashtra'].sum()}"
+        f"State and Cities Rows: "
+        f"{df['is_state_and_cities'].sum()}"
     )
 
     print(

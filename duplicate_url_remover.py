@@ -1,8 +1,15 @@
 import pandas as pd
+import sys
 
-INPUT_FILE = "data/raw/raw_rss_results_maharashtra.csv"
+if len(sys.argv) < 2:
+    print("Usage: python noise_filter.py <state_name>")
+    sys.exit(1)
 
-OUTPUT_FILE = "data/deduplicated_url_based/unique_rss_results_maharashtra.csv"
+STATE = sys.argv[1]
+
+INPUT_FILE = "data/raw/raw_rss_results_"+ STATE  +".csv"
+
+OUTPUT_FILE = "data/deduplicated_url_based/unique_rss_results_"+ STATE + ".csv"
 
 def main():
 
