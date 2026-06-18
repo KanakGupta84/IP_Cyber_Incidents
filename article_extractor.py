@@ -1,147 +1,165 @@
 import os
-import time
-import requests
-import trafilatura
 import pandas as pd
-import requests
+import trafilatura
+from tqdm import tqdm
+from config_keywords_reject_terms.config import STATE
 
-from langdetect import detect
+INPUT_FILE = f"data/processed/decoded_url_candidate_articles_{STATE}.csv"
+OUTPUT_FILE = f"data/processed/full_articles_{STATE}.csv"
 
-# INPUT_FILE = "data/deduplicated_url_based/candidate_articles_maharashtra.csv"
+CHECKPOINT_EVERY = 25
 
-# OUTPUT_FILE = "data/raw/raw_articles_noisefilter_maharashtra.csv"
 
-# os.makedirs(
-# "data/raw",
-# exist_ok=True
-# )
+def get_article_text(url):
 
-# def extract_article(url):
+    if pd.isna(url):
+        return None
 
-#     try:
+    url = str(url).strip()
 
-#         downloaded = trafilatura.fetch_url(
-#             url
-#         )
+    if not url.startswith("http"):
+        return None
 
-#         if downloaded:
+    try:
 
-#             text = trafilatura.extract(
-#                 downloaded
-#             )
+        downloaded = trafilatura.fetch_url(url)
 
-#             if text:
+        if not downloaded:
+            return None
 
-#                 return (
-#                     text,
-#                     "trafilatura",
-#                     "success"
-#                 )
+        text = trafilatura.extract(
+            downloaded,
+            include_comments=False,
+            include_tables=False,
+            include_links=False
+        )
 
-#     except Exception:
-#         pass
+        return text
 
-#     return (
-#         "",
-#         "none",
-#         "failed"
-#     )
+    except Exception as e:
+        print(f"\nError extracting {url}")
+        return None
 
-# def detect_language(text):
 
-#     try:
+# ---------------------------------
+# Load source file
+# ---------------------------------
 
-#         return detect(text)
+df = pd.read_csv(INPUT_FILE)
 
-#     except Exception:
+print(f"Loaded {len(df)} rows")
 
-#         return "unknown"
+# ---------------------------------
+# Resume support
+# ---------------------------------
 
-# def main():
+if os.path.exists(OUTPUT_FILE):
 
-#     df = pd.read_csv(
-#         INPUT_FILE
-#     )
+    old_df = pd.read_csv(OUTPUT_FILE)
 
-#     TEST_SIZE = 50
-#     df = df.head(TEST_SIZE)
-#     print(
-#         f"Testing on {len(df)} articles"
-#     )
+    if "article_text" in old_df.columns:
 
-#     records = []
+        df["article_text"] = old_df["article_text"]
 
-#     total = len(df)
+        print("Resuming previous extraction run")
 
-#     for idx, row in df.iterrows():
+else:
 
-#         print(
-#             f"[{idx+1}/{total}]"
-#         )
+    if "article_text" not in df.columns:
+        df["article_text"] = None
 
-#         url = row["url"]
 
-#         text, method, status = (
-#             extract_article(url)
-#         )
+# ---------------------------------
+# Extraction loop
+# ---------------------------------
 
-#         language = (
-#             detect_language(text)
-#             if text
-#             else "unknown"
-#         )
+processed = 0
 
-#         record = row.to_dict()
+try:
 
-#         record[
-#             "article_text"
-#         ] = text
+    for idx in tqdm(df.index):
 
-#         record[
-#             "language"
-#         ] = language
+        existing_text = df.at[idx, "article_text"]
 
-#         record[
-#             "extraction_method"
-#         ] = method
+        # Skip already processed rows
+        if pd.notna(existing_text) and str(existing_text).strip():
+            continue
 
-#         record[
-#             "extraction_status"
-#         ] = status
+        url = df.at[idx, "real_url"]
 
-#         records.append(
-#             record
-#         )
+        article_text = get_article_text(url)
 
-#         time.sleep(1)
+        df.at[idx, "article_text"] = article_text
 
-#     result = pd.DataFrame(
-#         records
-#     )
+        processed += 1
 
-#     result.to_csv(
-#         OUTPUT_FILE,
-#         index=False
-#     )
+        # Save checkpoint
+        if processed % CHECKPOINT_EVERY == 0:
 
-#     print()
+            df.to_csv(
+                OUTPUT_FILE,
+                index=False
+            )
 
-#     print(
-#         f"Saved {len(result)} rows"
-#     )
+            print(
+                f"\nCheckpoint saved "
+                f"({processed} new articles processed)"
+            )
 
-url = "https://news.google.com/rss/articles/CBMi1gFBVV95cUxNTFJyMFlWb29tc0x4T1FIeW5hOHN0eHRmV044bGtUMlRjN0R3b0IxdVNZT2RfTnl2NC1yYlpjeWlyanhnRTJvbFFjRUVHN0JYdW0zQ2szdW56czExREp6RXd0M1liWmI5VUpPUDVRNXNQSWtKTE0wVjRVUHNfU0lTbG4wYS1nS1MwOGdSeFByU0JTY0lCbGxOWFNoWDNiQlYtcVZaOVpEU1BaMmJfUFFnU1JtVXhoYTBSVUVjVzBMdTZQQ05aZ0lrS21kVzhSMklRTXJQSUVR0gHcAUFVX3lxTFBFN1JSVS1aU2xna0N2WEctQjhFRXZHd28tZFp4SXFhSXVDN29sejZmTUhoUmxuVnVPeWY4S04tMHdDNWcxc3AxY0dsR1Z6cVc0MUZQejhCdkdxVUdvQWJaQTBjYl9pUXJuY25OcC14QzNTUURqaTVvWmVENFIwdUlVQ3Bvdnc3ZHc5d0ZKZTFGTkhPc2NmSUM5ZjJxVzEyZ0VSUnZnVzIteXF3VlpqRTNRNFduUjVHY2dpejZtUEFXWmZnbEY4NkFFdjNnWXVEM01xVklTdHV1RWdtQmU?oc=5"
+except KeyboardInterrupt:
 
-r = requests.get(
-    url,
-    allow_redirects=True,
-    timeout=30,
-    headers={
-        "User-Agent": "Mozilla/5.0"
-    }
+    print("\nStopping safely...")
+
+    df.to_csv(
+        OUTPUT_FILE,
+        index=False
+    )
+
+    print(
+        f"Progress saved to {OUTPUT_FILE}"
+    )
+
+    raise
+
+
+# ---------------------------------
+# Final save
+# ---------------------------------
+
+df.to_csv(
+    OUTPUT_FILE,
+    index=False
 )
 
-print(r.url)
+# ---------------------------------
+# Statistics
+# ---------------------------------
 
-# if __name__ == "__main__":
-#     main()
+article_lengths = (
+    df["article_text"]
+    .fillna("")
+    .str.len()
+)
+
+successful = (article_lengths > 500).sum()
+
+partial = (
+    (article_lengths > 50)
+    & (article_lengths <= 500)
+).sum()
+
+failed = (article_lengths <= 50).sum()
+
+print("\n========== EXTRACTION SUMMARY ==========")
+
+print(f"Total Articles     : {len(df)}")
+print(f"Successful         : {successful}")
+print(f"Partial Extraction : {partial}")
+print(f"Failed             : {failed}")
+
+print("\nColumns retained:")
+
+for col in df.columns:
+    print(f" - {col}")
+
+print(f"\nSaved to: {OUTPUT_FILE}")
