@@ -1,0 +1,9 @@
+-- database: ./uttar_pradesh.db
+
+
+CREATE TABLE SCAM_CATEGORY (
+    scam_category_id INTEGER PRIMARY KEY AUTOINCREMENT,
+    incident_id        INTEGER DEFAULT NULL,
+    scam_name          TEXT    DEFAULT NULL,
+    FOREIGN KEY (incident_id) REFERENCES INCIDENTS(incident_id)
+);

@@ -1,11 +1,17 @@
 import os
+import sys
 import pandas as pd
 import trafilatura
 from tqdm import tqdm
-from config_keywords_reject_terms.config import STATE
 
-INPUT_FILE = f"data/processed/decoded_url_candidate_articles_{STATE}.csv"
-OUTPUT_FILE = f"data/processed/full_articles_{STATE}.csv"
+if len(sys.argv) < 2:
+    print("Usage: python noise_filter.py <state_name>")
+    sys.exit(1)
+
+STATE = sys.argv[1]
+
+INPUT_FILE = f"processed/decoded_url_candidate_articles_{STATE}.csv"
+OUTPUT_FILE = f"data/article_revealed/full_articles_{STATE}.csv"
 
 CHECKPOINT_EVERY = 25
 

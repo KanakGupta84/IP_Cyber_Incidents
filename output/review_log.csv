@@ -1,0 +1,114 @@
+row_id,field,bad_value,url
+15,scam_categories,cyber-enabled financial crimes,https://theprint.in/india/cyber-fraud-racket-unearthed-in-ups-kanpur-8-arrested/2903960/
+15,scam_categories,online fraud,https://theprint.in/india/cyber-fraud-racket-unearthed-in-ups-kanpur-8-arrested/2903960/
+15,scam_categories,mule account,https://theprint.in/india/cyber-fraud-racket-unearthed-in-ups-kanpur-8-arrested/2903960/
+16,locations.state,Uttar Pradesh,https://the420.in/mathura-police-mini-jamtara-cyber-fraud-raids-uttar-pradesh/
+16,locations.state,Uttar Pradesh,https://the420.in/mathura-police-mini-jamtara-cyber-fraud-raids-uttar-pradesh/
+17,scam_categories,cyber fraud syndicate,https://the420.in/government-scheme-mule-accounts-7-arrested-gorakhpur-cyber-fraud/
+17,scam_categories,government schemes fraud,https://the420.in/government-scheme-mule-accounts-7-arrested-gorakhpur-cyber-fraud/
+18,scam_categories,fake call center,https://the420.in/up-police-busts-kanpur-cyber-fraud-racket-arrests-19-youths/
+19,scam_categories,cyber fraud,https://timesofindia.indiatimes.com/city/ahmedabad/gujarat-man-whose-mule-account-is-linked-to-complaints-in-kerala-tamil-nadu-and-uttar-pradesh-booked-for-cyberfraud/articleshow/129686446.cms
+19,scam_categories,mule account,https://timesofindia.indiatimes.com/city/ahmedabad/gujarat-man-whose-mule-account-is-linked-to-complaints-in-kerala-tamil-nadu-and-uttar-pradesh-booked-for-cyberfraud/articleshow/129686446.cms
+19,locations.state,Gujarat,https://timesofindia.indiatimes.com/city/ahmedabad/gujarat-man-whose-mule-account-is-linked-to-complaints-in-kerala-tamil-nadu-and-uttar-pradesh-booked-for-cyberfraud/articleshow/129686446.cms
+19,locations.state,Gujarat,https://timesofindia.indiatimes.com/city/ahmedabad/gujarat-man-whose-mule-account-is-linked-to-complaints-in-kerala-tamil-nadu-and-uttar-pradesh-booked-for-cyberfraud/articleshow/129686446.cms
+20,scam_categories,cyber fraud network,https://the420.in/balrampur-cyber-fraud-58-crore-five-arrested-network/
+20,scam_categories,financial fraud,https://the420.in/balrampur-cyber-fraud-58-crore-five-arrested-network/
+20,scam_categories,forgery,https://the420.in/balrampur-cyber-fraud-58-crore-five-arrested-network/
+22,scam_categories,mule accounts,https://www.hindustantimes.com/cities/lucknow-news/interstate-cyber-fraud-racket-busted-in-up-s-mirzapur-8-held-101773933323231.html
+24,scam_categories,fake marksheet syndicate,https://the420.in/uttar-pradesh-fake-marksheet-syndicate-state-open-school-arrest/
+24,scam_categories,forged educational documents,https://the420.in/uttar-pradesh-fake-marksheet-syndicate-state-open-school-arrest/
+24,scam_categories,forgery,https://the420.in/uttar-pradesh-fake-marksheet-syndicate-state-open-school-arrest/
+25,scam_categories,recruitment examinations rigging,https://www.thehindu.com/news/national/uttar-pradesh/up-stf-busts-ssc-exam-rigging-racket-in-greater-noida-seven-held/article71013990.ece
+35,platforms,Binance,https://telecom.economictimes.indiatimes.com/news/industry/digital-frauds-skyrocket-in-eastern-uttar-pradesh-airtel-reports-alarming-trends/122354537
+35,scam_categories,mule accounts,https://telecom.economictimes.indiatimes.com/news/industry/digital-frauds-skyrocket-in-eastern-uttar-pradesh-airtel-reports-alarming-trends/122354537
+35,scam_categories,crypto trading,https://telecom.economictimes.indiatimes.com/news/industry/digital-frauds-skyrocket-in-eastern-uttar-pradesh-airtel-reports-alarming-trends/122354537
+35,accused_names,Ajay,https://telecom.economictimes.indiatimes.com/news/industry/digital-frauds-skyrocket-in-eastern-uttar-pradesh-airtel-reports-alarming-trends/122354537
+36,amount_lost,800000,https://economictimes.indiatimes.com/news/india/lucknows-mule-account-menace-how-local-youths-are-fuelling-global-cyber-fraud-network/articleshow/123214265.cms?from=mdr
+36,platforms,Instagram,https://economictimes.indiatimes.com/news/india/lucknows-mule-account-menace-how-local-youths-are-fuelling-global-cyber-fraud-network/articleshow/123214265.cms?from=mdr
+36,scam_categories,online financial frauds,https://economictimes.indiatimes.com/news/india/lucknows-mule-account-menace-how-local-youths-are-fuelling-global-cyber-fraud-network/articleshow/123214265.cms?from=mdr
+36,scam_categories,APK malware,https://economictimes.indiatimes.com/news/india/lucknows-mule-account-menace-how-local-youths-are-fuelling-global-cyber-fraud-network/articleshow/123214265.cms?from=mdr
+36,scam_categories,impersonation,https://economictimes.indiatimes.com/news/india/lucknows-mule-account-menace-how-local-youths-are-fuelling-global-cyber-fraud-network/articleshow/123214265.cms?from=mdr
+36,accused_names,Imran Ali,https://economictimes.indiatimes.com/news/india/lucknows-mule-account-menace-how-local-youths-are-fuelling-global-cyber-fraud-network/articleshow/123214265.cms?from=mdr
+36,accused_names,Samad,https://economictimes.indiatimes.com/news/india/lucknows-mule-account-menace-how-local-youths-are-fuelling-global-cyber-fraud-network/articleshow/123214265.cms?from=mdr
+36,accused_names,Parvez Ansari,https://economictimes.indiatimes.com/news/india/lucknows-mule-account-menace-how-local-youths-are-fuelling-global-cyber-fraud-network/articleshow/123214265.cms?from=mdr
+36,accused_names,Mohammad Kaleem,https://economictimes.indiatimes.com/news/india/lucknows-mule-account-menace-how-local-youths-are-fuelling-global-cyber-fraud-network/articleshow/123214265.cms?from=mdr
+36,accused_names,Monu Chaurasia,https://economictimes.indiatimes.com/news/india/lucknows-mule-account-menace-how-local-youths-are-fuelling-global-cyber-fraud-network/articleshow/123214265.cms?from=mdr
+36,accused_names,Sultan Ansari,https://economictimes.indiatimes.com/news/india/lucknows-mule-account-menace-how-local-youths-are-fuelling-global-cyber-fraud-network/articleshow/123214265.cms?from=mdr
+36,accused_names,Brijesh Kumar,https://economictimes.indiatimes.com/news/india/lucknows-mule-account-menace-how-local-youths-are-fuelling-global-cyber-fraud-network/articleshow/123214265.cms?from=mdr
+36,locations.city,Azamgarh,https://economictimes.indiatimes.com/news/india/lucknows-mule-account-menace-how-local-youths-are-fuelling-global-cyber-fraud-network/articleshow/123214265.cms?from=mdr
+36,locations.city,Rampur,https://economictimes.indiatimes.com/news/india/lucknows-mule-account-menace-how-local-youths-are-fuelling-global-cyber-fraud-network/articleshow/123214265.cms?from=mdr
+37,platforms,Telegram,https://the420.in/azamgarh-cyber-fraud-gang-110-crore-apk-malware-investment-scam/
+37,scam_categories,impersonation,https://the420.in/azamgarh-cyber-fraud-gang-110-crore-apk-malware-investment-scam/
+38,scam_categories,impersonation,https://timesofindia.indiatimes.com/city/lucknow/uttar-pradesh-stf-arrests-3-for-duping-people-with-fake-social-media-pages/articleshow/120653424.cms
+39,scam_categories,online scam,https://www.newindianexpress.com/india/2025/Aug/13/mechanical-engineer-allegedly-running-rs-six-crore-online-scam-arrested-from-noida
+39,locations.state,Uttar Pradesh,https://www.newindianexpress.com/india/2025/Aug/13/mechanical-engineer-allegedly-running-rs-six-crore-online-scam-arrested-from-noida
+39,locations.state,Uttar Pradesh,https://www.newindianexpress.com/india/2025/Aug/13/mechanical-engineer-allegedly-running-rs-six-crore-online-scam-arrested-from-noida
+43,amount_lost,42000000000,https://timesofindia.indiatimes.com/city/lucknow/uttar-pradesh-cops-unearths-rs-4200-crore-frauds-linked-to-chinese-operators/articleshow/94103428.cms
+45,locations.state,Uttar Pradesh,https://thefederal.com/category/states/north/uttar-pradesh/digital-arrest-fraud-delhi-police-nabs-6-in-lucknow-216479
+47,scam_categories,impersonation,https://www.etvbharat.com/en/state/arrest-of-cybercriminals-in-uttar-pradesh-uncovers-digital-arrest-scam-enn25102901869
+48,scam_categories,impersonation,https://www.bhaskarenglish.in/local/uttar-pradesh/news/bijnor-woman-suicide-blackmail-digital-fraud-says-exhausted-137823397.html
+50,scam_categories,impersonation,https://www.thehindu.com/news/national/karnataka/digital-arrest-case-in-shivamogga-police-arrest-two-from-uttar-pradesh-recover-2389-lakh/article68872556.ece
+52,scam_categories,cyber fraud,https://timesofindia.indiatimes.com/city/jaipur/man-arrested-for-aiding-digital-arrest-cyber-fraud-in-kanpur/articleshow/120179233.cms
+55,scam_categories,digital arrest fraud,https://timesofindia.indiatimes.com/city/bhubaneswar/mother-son-duo-held-for-digital-arrest-fraud-worth-rs-1-37-crore/articleshow/116745869.cms
+57,scam_categories,subscription scams,https://easternherald.com/2026/05/14/kanpur-adobe-scam-india-underground-subscription-economy/
+58,accused_names,Rahul,https://www.latestly.com/india/news/digital-arrest-fraud-in-uttar-praesh-model-shivankita-dixit-put-under-digital-arrest-for-2-hours-in-agra-loses-inr-99000-6468073.html
+59,scam_categories,UPI fraud,https://the420.in/aligarh-upi-fraud-government-employee-bank-account-cyber-probe/
+60,scam_categories,gaming app scam,https://the420.in/hardoi-gaming-app-cyber-fraud-arrests/
+62,scam_categories,financial frauds,https://the420.in/agra-fake-sim-upi-cyber-fraud-30-crore-network/
+62,scam_categories,identity-based scams,https://the420.in/agra-fake-sim-upi-cyber-fraud-30-crore-network/
+63,scam_categories,fake UPI fraud case,https://the420.in/gorakhpur-real-estate-upi-fake-screenshot-scam-24-crore-21-accused/
+64,scam_categories,CNET leak scam,https://the420.in/cnet-2026-fake-paper-scam-stf-arrest-lucknow/
+66,locations.state,Uttar Pradesh,https://timesofindia.indiatimes.com/city/agra/man-who-killed-beggar-to-fake-his-death-for-rs-60l-held-after-17-yrs/articleshow/111350323.cms
+66,locations.city,Noida,https://timesofindia.indiatimes.com/city/agra/man-who-killed-beggar-to-fake-his-death-for-rs-60l-held-after-17-yrs/articleshow/111350323.cms
+66,locations.state,Uttar Pradesh,https://timesofindia.indiatimes.com/city/agra/man-who-killed-beggar-to-fake-his-death-for-rs-60l-held-after-17-yrs/articleshow/111350323.cms
+67,scam_categories,Agniveer recruitment fraud,https://timesofindia.indiatimes.com/city/meerut/uttar-pradesh-army-jawan-involved-in-agniveer-recruitment-fraud-nabbed/articleshow/94486147.cms
+67,scam_categories,impersonation,https://timesofindia.indiatimes.com/city/meerut/uttar-pradesh-army-jawan-involved-in-agniveer-recruitment-fraud-nabbed/articleshow/94486147.cms
+67,locations.state,Uttar Pradesh,https://timesofindia.indiatimes.com/city/meerut/uttar-pradesh-army-jawan-involved-in-agniveer-recruitment-fraud-nabbed/articleshow/94486147.cms
+69,scam_categories,impersonation,https://the420.in/azamgarh-cyber-fraud-1-crore-next-trade-app-arrests/
+70,scam_categories,organized criminal activity,https://the420.in/shahjahanpur-pension-scam-4-49-cr-assets-seizure-rajesh-kumar/
+71,platforms,VIRTUALPBX SOFTPHONE-JACK,https://www.bhaskarenglish.in/local/uttar-pradesh/news/fraudsters-in-noida-target-nris-with-fake-ott-subscriptions-viewers-duped-by-pirated-apps-136665562.html
+71,scam_categories,OTT subscriptions scam,https://www.bhaskarenglish.in/local/uttar-pradesh/news/fraudsters-in-noida-target-nris-with-fake-ott-subscriptions-viewers-duped-by-pirated-apps-136665562.html
+72,scam_categories,cyber fraud,https://www.indiatoday.in/india/story/arrested-stealing-amazon-online-shoppers-data-via-dark-web-telegram-app-in-lucknow-2659833-2025-01-04
+72,locations.state,Uttar Pradesh,https://www.indiatoday.in/india/story/arrested-stealing-amazon-online-shoppers-data-via-dark-web-telegram-app-in-lucknow-2659833-2025-01-04
+74,scam_categories,cyber fraud,https://timesofindia.indiatimes.com/city/kolhapur/kolhapur-farmer-loses-rs-5l-to-crooks-after-son-clicks-on-virtual-firearms-purchase-link-while-downloading-game-on-smartphone/articleshow/122305957.cms
+74,scam_categories,online game scam,https://timesofindia.indiatimes.com/city/kolhapur/kolhapur-farmer-loses-rs-5l-to-crooks-after-son-clicks-on-virtual-firearms-purchase-link-while-downloading-game-on-smartphone/articleshow/122305957.cms
+75,amount_lost,6500,https://www.opindia.com/2024/10/up-police-uncovers-dating-scam-in-ghaziabads-tiger-cafe-8-persons-including-5-women-arrested/
+75,scam_categories,dating app scam,https://www.opindia.com/2024/10/up-police-uncovers-dating-scam-in-ghaziabads-tiger-cafe-8-persons-including-5-women-arrested/
+78,scam_categories,online stock market scam,https://www.freepressjournal.in/mumbai/mumbai-cyber-fraud-retired-wadala-banker-duped-of-7-lakh-in-online-stock-market-scam-5-from-uttar-pradesh-booked
+78,scam_categories,impersonation,https://www.freepressjournal.in/mumbai/mumbai-cyber-fraud-retired-wadala-banker-duped-of-7-lakh-in-online-stock-market-scam-5-from-uttar-pradesh-booked
+79,scam_categories,impersonation,https://www.onmanorama.com/news/kerala/2025/07/20/kochi-cyber-police-arrests-parivahan-app-scam-varanasi-16-year-old-uttar-pradesh.html
+80,scam_categories,medicine delivery scam,https://the420.in/meerut-medicine-delivery-cyber-fraud-customer-data-scam/
+82,scam_categories,mule account racket,https://the420.in/deoria-60-crore-mule-account-racket-busted-cyber-fraud/
+83,scam_categories,impersonation,https://the420.in/gorakhpur-ecommerce-investment-scam-3-crore-fake-returns-fraud-case/
+84,scam_categories,fake GST bill fraud,https://thenewsmill.com/2026/06/four-delhi-accountants-arrested-in-rs-18-crore-fake-gst-bill-fraud-in-uttar-pradesh/
+84,scam_categories,GST bill fraud,https://thenewsmill.com/2026/06/four-delhi-accountants-arrested-in-rs-18-crore-fake-gst-bill-fraud-in-uttar-pradesh/
+86,scam_categories,matrimonial scam,https://www.livemint.com/news/trends/man-becomes-victim-of-online-dating-scam-in-ghaziabad-forced-to-pay-rs-34-000-cafe-bill-11733997044131.html
+86,scam_categories,extortion,https://www.livemint.com/news/trends/man-becomes-victim-of-online-dating-scam-in-ghaziabad-forced-to-pay-rs-34-000-cafe-bill-11733997044131.html
+88,scam_categories,dating fraud,https://www.indiatvnews.com/uttar-pradesh/ghaziabad-rs-16400-bill-for-cold-drink-in-tiger-cafe-dating-fraud-busted-in-kaushambi-police-investigation-uttar-pradesh-scam-alert-latest-updates-2024-10-25-958915
+88,scam_categories,extortion,https://www.indiatvnews.com/uttar-pradesh/ghaziabad-rs-16400-bill-for-cold-drink-in-tiger-cafe-dating-fraud-busted-in-kaushambi-police-investigation-uttar-pradesh-scam-alert-latest-updates-2024-10-25-958915
+88,scam_categories,wrongful confinement,https://www.indiatvnews.com/uttar-pradesh/ghaziabad-rs-16400-bill-for-cold-drink-in-tiger-cafe-dating-fraud-busted-in-kaushambi-police-investigation-uttar-pradesh-scam-alert-latest-updates-2024-10-25-958915
+89,amount_lost,22679000000,https://timesofindia.indiatimes.com/city/lucknow/uttar-pradesh-govt-examining-cbi-request-to-question-3-ias-officers/articleshow/89281530.cms
+89,scam_categories,Employees' Provident Fund scam,https://timesofindia.indiatimes.com/city/lucknow/uttar-pradesh-govt-examining-cbi-request-to-question-3-ias-officers/articleshow/89281530.cms
+90,scam_categories,fake call centre racket,https://the420.in/gorakhpur-fake-call-centre-international-cyber-fraud-bust/
+90,scam_categories,tech support fraud,https://the420.in/gorakhpur-fake-call-centre-international-cyber-fraud-bust/
+91,scam_categories,impersonation,https://the420.in/ai-voice-cloning-fraud-madhya-pradesh-indore-play-school-owner-duped/
+92,scam_categories,GST fraud,https://the420.in/varanasi-upsc-aspirant-pan-fraud-25-59cr-loan-kyc-lapse/
+92,scam_categories,loan fraud,https://the420.in/varanasi-upsc-aspirant-pan-fraud-25-59cr-loan-kyc-lapse/
+93,scam_categories,impersonation,https://www.newindianexpress.com/india/2022/Apr/22/uttar-pradesh-cyber-police-nab-two-of-jamtara-gang-caution-against-toll-free-numbers-in-google-ads-2445188.html
+95,scam_categories,impersonation,https://www.thefinancialworld.com/four-it-students-of-noida-university-arrested-for-cyber-frauds/
+96,scam_categories,communal wedding scam,https://www.hindustantimes.com/india-news/mass-wedding-fraud-in-uttar-pradesh-brides-garland-themselves-15-arrested-101707038099038.html
+96,scam_categories,impersonation,https://www.hindustantimes.com/india-news/mass-wedding-fraud-in-uttar-pradesh-brides-garland-themselves-15-arrested-101707038099038.html
+99,scam_categories,travel package fraud,https://timesofindia.indiatimes.com/city/noida/fake-medical-representative-held-for-duping-doctors-with-foreign-holiday-bait-in-noida/articleshow/97925370.cms
+99,scam_categories,cyber fraud,https://timesofindia.indiatimes.com/city/noida/fake-medical-representative-held-for-duping-doctors-with-foreign-holiday-bait-in-noida/articleshow/97925370.cms
+99,scam_categories,impersonation,https://timesofindia.indiatimes.com/city/noida/fake-medical-representative-held-for-duping-doctors-with-foreign-holiday-bait-in-noida/articleshow/97925370.cms
+105,scam_categories,insurance policy upgrade,https://kalingatv.com/odisha/odisha-crime-branch-arrests-8-inter-state-cyber-fraudsters-from-delhi-and-uttar-pradesh/
+105,scam_categories,impersonation,https://kalingatv.com/odisha/odisha-crime-branch-arrests-8-inter-state-cyber-fraudsters-from-delhi-and-uttar-pradesh/
+107,scam_categories,micronation scam,https://timesofindia.indiatimes.com/city/delhi/ghaziabad-micronation-scam-man-sets-up-fake-embassies-of-fictional-nations-claims-ties-with-seborga-west-arctica-lodonia-luxury-watches-diplomatic-number-plates-forged-ids-seized/articleshow/122853645.cms
+107,scam_categories,fake embassies,https://timesofindia.indiatimes.com/city/delhi/ghaziabad-micronation-scam-man-sets-up-fake-embassies-of-fictional-nations-claims-ties-with-seborga-west-arctica-lodonia-luxury-watches-diplomatic-number-plates-forged-ids-seized/articleshow/122853645.cms
+107,scam_categories,forgery,https://timesofindia.indiatimes.com/city/delhi/ghaziabad-micronation-scam-man-sets-up-fake-embassies-of-fictional-nations-claims-ties-with-seborga-west-arctica-lodonia-luxury-watches-diplomatic-number-plates-forged-ids-seized/articleshow/122853645.cms
+110,scam_categories,e-retail fraud,https://timesofindia.indiatimes.com/city/meerut/uttar-pradesh-gang-offers-free-chicken-to-get-peoples-aadhaar-details/articleshow/91086888.cms
+110,scam_categories,identity theft,https://timesofindia.indiatimes.com/city/meerut/uttar-pradesh-gang-offers-free-chicken-to-get-peoples-aadhaar-details/articleshow/91086888.cms
+110,locations.state,Uttar Pradesh,https://timesofindia.indiatimes.com/city/meerut/uttar-pradesh-gang-offers-free-chicken-to-get-peoples-aadhaar-details/articleshow/91086888.cms
+112,scam_categories,leasing scam,https://www.punekarnews.in/pune-pimpri-chinchwad-investors-duped-in-multi-crore-e-rickshaw-scam-accused-arrested-in-noida/
+112,scam_categories,impersonation,https://www.punekarnews.in/pune-pimpri-chinchwad-investors-duped-in-multi-crore-e-rickshaw-scam-accused-arrested-in-noida/
+114,scam_categories,cheating,https://news.abplive.com/news/odisha-police-busts-india-s-biggest-ever-job-scam-prime-accused-arrested-from-uttar-pradesh-1572999
