@@ -35,7 +35,6 @@ import time
 from pathlib import Path
 
 import pandas as pd
-import anthropic
 
 MODEL = "claude-sonnet-4-6"  # good accuracy/cost tradeoff for extraction
 
@@ -144,11 +143,15 @@ EXTRACTION_TOOL = {
                 "type": "array",
                 "items": {"type": "string"},
                 "description": (
-                    "The type(s) of scam, using the article's own wording where "
-                    "possible (e.g. if the article says 'digital arrest scam', use "
-                    "that phrase rather than substituting a different term like "
-                    "'impersonation fraud'). Do not introduce a category label that "
-                    "isn't reflected in the article's own language. if nothing of the can be get dont force to write anything ,use NULL"
+                    "List EACH type of scam as a SEPARATE entry in the array, using "
+                    "the article's own wording where possible. "
+                    "Do NOT group multiple distinct scam types under one umbrella label. "
+                    "For example, if the article mentions both 'honeytrap' and 'blackmail', "
+                    "add them as two separate entries — do NOT collapse them into a single "
+                    "label like 'sextortion'. Every distinct scam method or fraud type "
+                    "described in the article should be its own individual array element. "
+                    "Do not introduce a category label that is not reflected in the "
+                    "article's own language. If no scam type can be identified, use an empty list."
                 ),
             },
         },
